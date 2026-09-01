@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daily Baon & Expense Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="app-container">
+    <h2>Daily Allowance & Expense Tracker</h2>
+    <p>Keep track of your daily baon and expenses!</p>
+
+    <div class="summary-box">
+      <div class="card">
+        <small>Starting Budget</small>
+        <h3>₱<span id="budgetVal">0.00</span></h3>
+      </div>
+      <div class="card">
+        <small>Total Spent</small>
+        <h3>₱<span id="spentVal">0.00</span></h3>
+      </div>
+      <div class="card">
+        <small>Remaining</small>
+        <h3>₱<span id="remainVal">0.00</span></h3>
+      </div>
+    </div>
+
+    <div class="budget-section">
+      <input type="number" id="budgetInput" placeholder="Enter daily baon (e.g. 150)">
+      <button onclick="setBudget()">Set Budget</button>
+    </div>
+
+    <div class="form-section">
+      <h3>Add Expense</h3>
+      <input type="text" id="itemName" placeholder="Item name (e.g. Lunch)">
+      <input type="number" id="itemAmount" placeholder="Amount (₱)">
+      <select id="itemCategory">
+        <option value="Food">Food</option>
+        <option value="Fare">Fare / Transpo</option>
+        <option value="School Supplies">School Supplies</option>
+        <option value="Others">Others</option>
+      </select>
+      <button onclick="addExpense()">Add Expense</button>
+    </div>
+
+    <div class="list-section">
+      <h3>Expense History</h3>
+      <ul id="expenseList"></ul>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
